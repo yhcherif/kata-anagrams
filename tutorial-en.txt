@@ -1,0 +1,35 @@
+Code Kata : Anagrams
+
+If you can't sleep like me yesterday, well, this kata might help you busy while seeking sleep. As we're doing better  at dev martial arts (Code kata) let me introduce you another exercice to hone your skills.
+
+Anagrans
+
+Definition of anagrams
+
+Earlier today, your friend (Let call him John and he works for Acme :)) told you you he wanted a program that may generate all possibles anagrams for a given word. Well you're a kind person so you said him "No problem" and now you realize that you've got yourself trapped :). But actually you didn't because you like taking up challenges.
+
+So now that you've accepted, John tells you he wants a robust program and give your an example of how the program should look like.
+
+Imagine I pass "john" to the program, then it should return :
+John jonh jhon jhno jnoh jnho
+ojhn ojnh ohjn ohnj onjh onhj
+hjon hjno hojn honj hojn honj
+njoh njho nojh nohj nhjo nhoj
+
+Pretty weird huh! isn't it :) but let try it at least.
+
+First you need to Create create your folder and dig in. Next run Composer to require phpspec. Finally add your gulpfile we made in the last tutorial and run npm to install gulp, gulp-notify, lodash and gulp-phpspec.
+Let see how it works :
+composer require-dev phpspec/phpspec
+Note : Type Enter when it asks you to enter the version and it will pull in the lastest one.
+
+We can go ahead and paste our gulpfile. If you have watch the gulpfile tutorial I recommended you to go quickly take look on how you can optimize your workflow with gulp, or if you already have your own gulpfile juste paste it in.
+
+We've our environment ready so we can start coding. We're going to have one classin our program and call it Anagram. Next I think we can add a method called "generate" which take a word at the entry and return an array of all possible anagrams of that word or an empty array for an empty string. In order to acheive that we'll walk trhough the Test-Driven-Developement (if you are not familiar with TDD, I suggest you to read this tutorial first and then come back) and phpspec will di the trick.
+
+So let get started and describe our spec for the Anagram class.
+phpspec desc Acme\AnagramSpec
+or
+phpspec describe Acme\AnagramSpec
+
+These both command are the same.
